@@ -45,7 +45,7 @@ for url in urls:
     try:
         response = requests.post(url=target, data=payload, timeout=5)
         if '成功' in response.text:
-            success_targets.append(target)
+            success_targets.append(url)
             print(f"\033[32;1m[+] success {url}\033[0m")
         else:
             print(f"\033[1;34m[*] fail {url}\033[0m")
